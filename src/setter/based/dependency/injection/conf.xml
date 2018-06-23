@@ -6,12 +6,29 @@
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 	<!-- here his an example of definition of a bean -->
-	<bean id="textManager" class="setter.based.dependency.injection.model.TextManager" >
-		<property name="str" value="Setter based dependency injection instanciate from xml here"/>
-	</bean>
-	
+	<!-- <bean id="textManager" class="setter.based.dependency.injection.model.TextManager" 
+		> -->
+	<!-- <property name="str" value="Setter based dependency injection instanciate 
+		from xml here"/> -->
+	<!-- </bean> -->
+
+	<!-- <bean id="printer" class="setter.based.dependency.injection.model.Printer"> -->
+	<!-- <property name="textManager" ref="textManager"/> -->
+	<!-- </bean> -->
+
+
+
+
+
+<!-- this is a way to decalre inner bean DI --> 
+the one above is to declare in setter way
 	<bean id="printer" class="setter.based.dependency.injection.model.Printer">
-		<property name="textManager" ref="textManager"/>
+		<property name = "textManager">
+
+			<bean id="textManager" class="setter.based.dependency.injection.model.TextManager">
+				<property name ="str" value= "atreto no vitako oh"/>
+			</bean>
+		</property>
 	</bean>
 
 </beans>
