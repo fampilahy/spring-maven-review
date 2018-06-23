@@ -1,4 +1,4 @@
-package constructorbaseddependencyinjection.model;
+package constructor.based.dependency.injection.model;
 
 public class TextEditor {
 	
@@ -9,4 +9,9 @@ public class TextEditor {
 		this.spellChecker = spellChecker;
 	}
 
+	public SpellChecker getSpellChecker() {
+		return spellChecker;
+	}
+
+	
 }
