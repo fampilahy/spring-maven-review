@@ -20,13 +20,13 @@
 
 
 
-<!-- this is a way to decalre inner bean DI --> 
-the one above is to declare in setter way
+	<!-- this is a way to decalre inner bean DI -->
+	<!-- the one above is to declare in setter way -->
 	<bean id="printer" class="setter.based.dependency.injection.model.Printer">
-		<property name = "textManager">
+		<property name="textManager">
 
 			<bean id="textManager" class="setter.based.dependency.injection.model.TextManager">
-				<property name ="str" value= "atreto no vitako oh"/>
+				<property name="str" value="atreto no vitako oh" />
 			</bean>
 		</property>
 	</bean>
