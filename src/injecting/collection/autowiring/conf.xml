@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- here his an example of definition of a bean -->
+	<bean id="hello" class="injecting.collection.autowiring.Hello" scope="singleton" autowire="byName">
+	</bean>
+
+
+
+	<bean id="address" class="injecting.collection.autowiring.Address">
+		<property name="text" value="9a avenida 306">
+		</property>
+	</bean>
+
+	<bean id="email" class="injecting.collection.autowiring.Email">
+		<property name="text" value="randofrils@gmail.com">
+		</property>
+	</bean>
+
+</beans>
