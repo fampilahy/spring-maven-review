@@ -10,7 +10,7 @@
 		<aop:aspect id="log" ref="logging">
 			<aop:pointcut id="selectAll" expression="execution(* xml.based.aop.*.*(..))" />
 
-			<aop:around  pointcut-ref="selectAll" method="aroundAdvice" />
+			
 
 			<aop:before pointcut-ref="selectAll" method="beforeAdvice" />
 
@@ -22,7 +22,7 @@
 			<aop:after-throwing pointcut-ref="selectAll"
 				throwing="ex" method="afterThrowingAdvice" />
 
-
+<!-- <aop:around  pointcut-ref="selectAll" method="aroundAdvice" /> -->
 
 
 		</aop:aspect>

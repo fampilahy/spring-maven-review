@@ -18,9 +18,9 @@ public class Logging {
 		System.out.println("Throwing an exception "+ex.getMessage());
 	}
 	
-	public void aroundAdvice(){
-		System.out.print("Around the advice ");
-	}
+//	public void aroundAdvice(){
+//		System.out.print("Around the advice ");
+//	}
 	
 	public Logging(){
 		

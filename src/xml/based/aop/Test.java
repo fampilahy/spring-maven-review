@@ -14,10 +14,10 @@ public class Test {
 		
 		System.out.println("transaction is "+transaction.getDescription());
 		
-		System.out.println("-----------");
-		transaction.printException();
-		System.out.println("-----------");
-		System.out.println("transaction is "+transaction.getId());
+//		System.out.println("-----------");
+//		transaction.printException();
+//		System.out.println("-----------");
+//		System.out.println("transaction is "+transaction.getId());
 		
 	}
 	
