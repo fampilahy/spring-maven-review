@@ -10,7 +10,7 @@ public class Logging {
 		System.out.println("After the service ");
 	}
 	
-	public void afterReturningAdvice(Object value){
+	public void afterReturningValueAdvice(Object value){
 		System.out.println("Returning a value "+value.toString());
 	}
 	
@@ -20,5 +20,9 @@ public class Logging {
 	
 	public void aroundAdvice(){
 		System.out.print("Around the advice ");
+	}
+	
+	public Logging(){
+		
 	}
 }

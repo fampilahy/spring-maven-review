@@ -22,14 +22,25 @@
 	<dependencies>
 
 
-
+		<!-- this is for aspectj -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
 			<version>1.7.3</version>
 		</dependency>
 
+		<dependency>
+			<groupId>aopalliance</groupId>
+			<artifactId>aopalliance</artifactId>
+			<version>1.0</version>
+		</dependency>
 
+		<dependency>
+			<groupId>aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.5.2a</version>
+		</dependency>
+		<!-- fin aspectj -->
 
 		<dependency>
 			<groupId>org.springframework</groupId>

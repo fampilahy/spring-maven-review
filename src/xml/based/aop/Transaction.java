@@ -7,10 +7,12 @@ public class Transaction {
 	private String description;
 
 	public int getId() {
+		System.out.println("Inside getId() "+id); 
 		return id;
 	}
 
 	public String getDescription() {
+		System.out.println("Inside getDescription() "+description); 
 		return description;
 	}
 
