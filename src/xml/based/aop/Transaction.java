@@ -25,5 +25,10 @@ public class Transaction {
 	public Transaction() {
 
 	}
+	
+	public void printException(){
+		System.out.println("Exception raised up");
+		throw new IllegalArgumentException();
+	}
 
 }
