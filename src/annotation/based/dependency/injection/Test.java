@@ -12,8 +12,9 @@ public class Test {
 		
 		AbstractApplicationContext appCtxt = new ClassPathXmlApplicationContext("annotation/based/dependency/injection/conf.xml");
 		TextEditor textEditor = (TextEditor) appCtxt.getBean("textEditor");
+		Hello hello = (Hello) appCtxt.getBean("hello");
 		
-		System.out.println("====> "+textEditor.getText());
+		System.out.println("====> "+hello.getTextEditor().getText());
 	
 	}
 

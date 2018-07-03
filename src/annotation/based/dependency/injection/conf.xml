@@ -9,15 +9,23 @@
 
 	<context:annotation-config />
 	<!-- bean definitions go here -->
-	
-	
+
+
 	<bean id="hello" class="annotation.based.dependency.injection.Hello">
-	
-		<property name="textEditor" ref="textEditor"/>
+
+		<!-- <property name="textEditor" ref="textEditor"/> -->
 	</bean>
-	
-	<bean id="textEditor" class = "annotation.based.dependency.injection.TextEditor" >
+
+	<bean id="textEditor" class="annotation.based.dependency.injection.TextEditor" init-method="start">
 		<property name="text" value="Arendrina taratasy oh may oh may oh"></property>
 	</bean>
 
+	<bean id="textEditor1" class="annotation.based.dependency.injection.TextEditor">
+		<property name="text" value="text editor 1 eto ohhh"></property>
+	</bean>
+
+
+	<bean id="textEditor2" class="annotation.based.dependency.injection.TextEditor">
+		<property name="text" value="text editor 2 eto oh"></property>
+	</bean>
 </beans>

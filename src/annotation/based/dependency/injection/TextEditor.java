@@ -15,4 +15,8 @@ public class TextEditor {
 	public TextEditor() {
 
 	}
+	
+	public void start(){
+		System.out.println("we are initializing an object TextEditor");
+	}
 }
