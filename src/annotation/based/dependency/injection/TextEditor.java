@@ -1,5 +1,7 @@
 package annotation.based.dependency.injection;
 
+import javax.annotation.PostConstruct;
+
 public class TextEditor {
 
 	private String text;
@@ -16,7 +18,10 @@ public class TextEditor {
 
 	}
 	
+	@PostConstruct
 	public void start(){
 		System.out.println("we are initializing an object TextEditor");
 	}
+	
+	
 }

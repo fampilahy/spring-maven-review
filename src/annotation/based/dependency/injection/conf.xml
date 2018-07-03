@@ -16,7 +16,7 @@
 		<!-- <property name="textEditor" ref="textEditor"/> -->
 	</bean>
 
-	<bean id="textEditor" class="annotation.based.dependency.injection.TextEditor" init-method="start">
+	<bean id="textEditor" class="annotation.based.dependency.injection.TextEditor" init-method="stu">
 		<property name="text" value="Arendrina taratasy oh may oh may oh"></property>
 	</bean>
 
