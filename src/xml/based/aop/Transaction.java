@@ -26,7 +26,7 @@ public class Transaction {
 
 	}
 	
-	public void printException(){
+	public void printException() throws IllegalArgumentException{
 		System.out.println("Exception raised up");
 		throw new IllegalArgumentException();
 	}
