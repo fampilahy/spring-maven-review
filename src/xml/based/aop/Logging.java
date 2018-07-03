@@ -3,15 +3,15 @@ package xml.based.aop;
 public class Logging {
 	
 	public void beforeAdvice(){
-		System.out.println("Going to start the service");
+		System.out.println("Going to start the service ");
 	}
 	
 	public void afterAdvice(){
-		System.out.println("After the service");
+		System.out.println("After the service ");
 	}
 	
 	public void afterReturningAdvice(Object value){
-		System.out.println("Returning "+value.toString());
+		System.out.println("Returning a value "+value.toString());
 	}
 	
 	public void afterThrowingAdvice(IllegalArgumentException ex){
