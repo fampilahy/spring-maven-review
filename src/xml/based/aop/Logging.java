@@ -1,0 +1,24 @@
+package xml.based.aop;
+
+public class Logging {
+	
+	public void beforeAdvice(){
+		System.out.println("Going to start the service");
+	}
+	
+	public void afterAdvice(){
+		System.out.println("After the service");
+	}
+	
+	public void afterReturningAdvice(Object value){
+		System.out.println("Returning "+value.toString());
+	}
+	
+	public void afterThrowingAdvice(IllegalArgumentException ex){
+		System.out.println("Throwing an exception "+ex.getMessage());
+	}
+	
+	public void aroundAdvice(){
+		System.out.print("Around the advice ");
+	}
+}
