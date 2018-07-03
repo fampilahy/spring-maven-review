@@ -23,7 +23,11 @@
 
 
 
-
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>1.7.3</version>
+		</dependency>
 
 
 
@@ -33,7 +37,7 @@
 			<version>5.0.3.RELEASE</version>
 		</dependency>
 
-		
+
 	</dependencies>
 
 
