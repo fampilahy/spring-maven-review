@@ -6,26 +6,10 @@
    http://www.springframework.org/schema/aop 
    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
 
-	<!-- <aop:config> -->
-	<!-- <aop:aspect id="log" ref="logging"> -->
-	<!-- <aop:pointcut id="selectAll" expression="execution(* xml.based.aop.*.*(..))" 
-		/> -->
-
-	<!-- <aop:before pointcut-ref="selectAll" method="beforeAdvice" /> -->
-
-	<!-- <aop:after-returning pointcut-ref="selectAll" -->
-	<!-- returning="value" method="afterReturningValueAdvice" /> -->
-
-	<!-- <aop:after-throwing pointcut-ref="selectAll" -->
-	<!-- throwing="ex" method="afterThrowingAdvice" /> -->
-
-	<!-- </aop:aspect> -->
-	<!-- </aop:config> -->
-
 	<aop:config>
 		<aop:aspect id="audit" ref="auditing">
-			<aop:pointcut expression="" id="testAll" />
-			<aop:before pointcut-ref="auditing" method="afterAdvice" />
+			<aop:pointcut expression="execution(* xml.based.aop.*.*(..))" id="testAll" />
+			<aop:before pointcut-ref="testAll" method="beforeAdvice" />
 
 		</aop:aspect>
 	</aop:config>
