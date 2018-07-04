@@ -22,6 +22,18 @@
 	</aop:config>
 
 
+
+<aop:config>
+	<aop:aspect id=auditer ref>
+	
+	
+	
+	
+	</aop:aspect>
+</aop:config>
+
+		<bean id=> </bean>
+
 	<bean id="transaction" class="xml.based.aop.Transaction">
 		<property name="id" value="1" />
 		<property name="description" value="SALES" />
