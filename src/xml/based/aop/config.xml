@@ -6,12 +6,22 @@
    http://www.springframework.org/schema/aop 
    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
 
-	<aop:config>
-		<aop:aspect id="audit" ref="auditing">
-			<aop:pointcut expression="execution(* xml.based.aop.*.*(..))" id="testAll" />
-			<aop:before pointcut-ref="testAll" method="beforeAdvice" />
+<!-- 	<aop:config> -->
+<!-- 		<aop:aspect id="audit" ref="auditing"> -->
+<!-- 			<aop:pointcut expression="execution(* xml.based.aop.*.*(..))" id="testAll" /> -->
+<!-- 			<aop:before pointcut-ref="testAll" method="beforeAdvice" /> -->
 
+<!-- 		</aop:aspect> -->
+<!-- 	</aop:config> -->
+	
+	<aop:config>
+		<aop:aspect id="print" ref="printer">
+<!-- 		<aop:pointcut expression="execution(* xml.based.aop.SpellChecker.*(..))" id="usePrinter"/> -->
+		<aop:pointcut expression="execution(* xml.based.aop.*.*(..))" id="usePrinter"/>
+		<aop:after-returning pointcut-ref="usePrinter" method="print"/>
+		
 		</aop:aspect>
+	
 	</aop:config>
 
 	<bean id="spellChecker" class="xml.based.aop.SpellChecker">
@@ -30,5 +40,7 @@
 	<bean id="logging" class="xml.based.aop.Logging" />
 
 	<bean id="auditing" class="xml.based.aop.Auditing" />
+	
+	<bean id="printer" class="xml.based.aop.Printer" />
 
 </beans>

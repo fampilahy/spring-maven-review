@@ -12,12 +12,11 @@ public class Test {
 		TextEditor textEditor = (TextEditor) applicationContext.getBean("textEditor");
 		textEditor.getSpellChecker();
 		
+
 		
-		
-		
-		
+		Printer printer  = (Printer) applicationContext.getBean("printer");
+		printer.print();
 		
 		
 	}
-	
 }
