@@ -17,8 +17,8 @@
 <!-- 	definition of the aspect's conf -->
 	<aop:config>
 		<aop:aspect id="print" ref="printer">
-<!-- 		<aop:pointcut expression="execution(* xml.based.aop.SpellChecker.*(..))" id="usePrinter"/> -->
-		<aop:pointcut expression="execution(* xml.based.aop.*.*(..))" id="usePrinter"/>
+		<aop:pointcut expression="execution(* xml.based.aop.SpellChecker.getValue(..))" id="usePrinter"/>
+<!-- 		<aop:pointcut expression="execution(* xml.based.aop.*.*(..))" id="usePrinter"/> -->
 		<aop:after-returning pointcut-ref="usePrinter" method="print"/>
 		
 		</aop:aspect>
