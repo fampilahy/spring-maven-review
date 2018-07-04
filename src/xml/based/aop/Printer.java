@@ -7,7 +7,7 @@ public class Printer {
 	}
 	
 	
-	public void print(){
+	public static void print(){
 		System.out.println("We are inside printer");
 	}
 

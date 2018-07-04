@@ -14,6 +14,7 @@
 <!-- 		</aop:aspect> -->
 <!-- 	</aop:config> -->
 	
+<!-- 	definition of the aspect's conf -->
 	<aop:config>
 		<aop:aspect id="print" ref="printer">
 <!-- 		<aop:pointcut expression="execution(* xml.based.aop.SpellChecker.*(..))" id="usePrinter"/> -->
@@ -42,5 +43,7 @@
 	<bean id="auditing" class="xml.based.aop.Auditing" />
 	
 	<bean id="printer" class="xml.based.aop.Printer" />
+	
+	
 
 </beans>
