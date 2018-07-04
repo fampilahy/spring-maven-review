@@ -22,17 +22,13 @@
 	</aop:config>
 
 
-
-<aop:config>
-	<aop:aspect id=auditer ref>
-	
-	
-	
-	
-	</aop:aspect>
-</aop:config>
-
-		<bean id=> </bean>
+		<bean id="spellChecker" class="xml.based.aop.SpellChecker" >
+			<property name="value" value="My first start AOP"></property>
+		 </bean>
+		<bean id="textEditor" class="xml.based.aop.TextEditor" >
+			<property name="spellChecker" ref="spellChecker"></property>
+		 </bean>
+		
 
 	<bean id="transaction" class="xml.based.aop.Transaction">
 		<property name="id" value="1" />
