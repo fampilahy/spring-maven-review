@@ -10,20 +10,13 @@
 		<aop:aspect id="log" ref="logging">
 			<aop:pointcut id="selectAll" expression="execution(* xml.based.aop.*.*(..))" />
 
-			
-
 			<aop:before pointcut-ref="selectAll" method="beforeAdvice" />
-
-			<!-- <aop:after pointcut-ref = "selectAll" method = "afterAdvice"/> -->
 
 			<aop:after-returning pointcut-ref="selectAll"
 				returning="value" method="afterReturningValueAdvice" />
 
 			<aop:after-throwing pointcut-ref="selectAll"
 				throwing="ex" method="afterThrowingAdvice" />
-
-<!-- <aop:around  pointcut-ref="selectAll" method="aroundAdvice" /> -->
-
 
 		</aop:aspect>
 	</aop:config>
