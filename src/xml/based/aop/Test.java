@@ -9,12 +9,10 @@ public class Test {
 	public static void main (String[] args){
 		
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("xml/based/aop/config.xml");
+		TextEditor textEditor = (TextEditor) applicationContext.getBean("textEditor");
+		textEditor.getSpellChecker();
 		
-		Transaction transaction = (Transaction) applicationContext.getBean("transaction");
 		
-		System.out.println("transaction is "+transaction.getDescription());
-		
-
 		
 	}
 	
