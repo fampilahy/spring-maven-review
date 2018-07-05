@@ -7,19 +7,19 @@
    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
 
 <!-- 	<aop:config> -->
-<!-- 		<aop:aspect id="audit" ref="auditing"> -->
+<!-- 		<aop:aspect id="audit" ref="logging"> -->
 <!-- 			<aop:pointcut expression="execution(* xml.based.aop.*.*(..))" id="testAll" /> -->
 <!-- 			<aop:before pointcut-ref="testAll" method="beforeAdvice" /> -->
-
+<!-- 			<aop:after-returning pointcut-ref="testAll" method="afterReturningValueAdvice" returning="value"/>  -->
 <!-- 		</aop:aspect> -->
 <!-- 	</aop:config> -->
 	
 <!-- 	definition of the aspect's conf -->
 	<aop:config>
 		<aop:aspect id="print" ref="printer">
-		<aop:pointcut expression="execution(* xml.based.aop.SpellChecker.getValue(..))" id="usePrinter"/>
-<!-- 		<aop:pointcut expression="execution(* xml.based.aop.*.*(..))" id="usePrinter"/> -->
-		<aop:after-returning pointcut-ref="usePrinter" method="print" returning="obj"/>
+		<aop:pointcut expression="execution(* xml.based.aop.TextEditor.getSpellChecker(..))" id="usePrinter"/>
+
+		<aop:after-returning pointcut-ref="usePrinter" method="printing" returning="generatedObject"/>
 		<aop:before pointcut-ref="usePrinter" method="print" />
 		
 		</aop:aspect>

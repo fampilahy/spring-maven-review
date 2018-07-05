@@ -7,12 +7,17 @@ public class Printer {
 	}
 	
 	
-//	public static void print(){
-////		System.out.println("We are inside printer");
-//	}
-
-	public static void print(Object obj){
-		System.out.println("We are inside printer ==> "+obj.getClass());
+	public static void print(){
+		System.out.println("We are inside printer");
 	}
+
+	public void printing(Object generatedObject){
+		System.out.println("We are inside printer.printing() ==> "+generatedObject.getClass());
+	}
+	
+	
+//	public void print(){
+//		System.out.println("We are inside printer ==> "+Printer.class);
+//	}
 	
 }

@@ -12,13 +12,7 @@ public class Test {
 		TextEditor textEditor = (TextEditor) applicationContext.getBean("textEditor");
 		textEditor.getSpellChecker().getValue();
 		
-
 		
-//		Printer printer  = (Printer) applicationContext.getBean("printer");
-//		printer.print();
-		
-		
-//		mail.google.com
 		
 	}
 }
