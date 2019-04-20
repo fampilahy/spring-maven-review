@@ -1,6 +1,7 @@
 package calculator;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,16 +11,20 @@ public class Test {
 
 	public static void main(String[] args) {
 
-		ApplicationContext app = new AnnotationConfigApplicationContext(Test.class);
-		CalculatorView aCalculatorView = (CalculatorView) app.getBean("view1");
+		ConfigurableApplicationContext cApp = new AnnotationConfigApplicationContext(Test.class);
+		cApp.start();
+
+		// ApplicationContext app = new
+		// AnnotationConfigApplicationContext(Test.class);
+		CalculatorView aCalculatorView = (CalculatorView) cApp.getBean("view1");
 		// CalculatorView aCalculatorView2 = (CalculatorView)
 		// app.getBean("view1");
-		CalculatorView aCalculatorView2 = (CalculatorView) app.getBean("view2");// here
-																				// it
-																				// will
-																				// create
-																				// 2
-																				// instances
+		CalculatorView aCalculatorView2 = (CalculatorView) cApp.getBean("view1");// here
+																					// it
+																					// will
+																					// create
+																					// 2
+																					// instances
 		aCalculatorView.setVisible(true);
 		aCalculatorView2.setVisible(true);
 	}
@@ -37,6 +42,16 @@ public class Test {
 	@Bean
 	public CalculatorService getService() {
 		return new CalculatorService();
+	}
+
+	@Bean
+	ContextStartedListener getStartListener() {
+		return new ContextStartedListener();
+	}
+
+	@Bean
+	ContextStartedListener2 getStartListener2() {
+		return new ContextStartedListener2();
 	}
 
 }
