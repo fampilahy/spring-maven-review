@@ -18,6 +18,10 @@ public class TextEditor {
 
 	}
 	
+	private void stu(){
+		System.err.println("inside stu ");
+	}
+	
 	@PostConstruct
 	public void start(){
 		System.out.println("we are initializing an object TextEditor");
