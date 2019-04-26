@@ -1,0 +1,65 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+   http://www.springframework.org/schema/aop 
+   http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
+
+	<aop:config>
+		<aop:aspect id="logging-aspect" ref="loggingService">
+
+
+			<!-- para logear los servicios de Calculadora -->
+
+			<aop:pointcut
+				expression="execution(* xml.schema.based.aop.CalculatorService.addition(..))"
+				id="calculator-addition-logging" />
+
+			<aop:before pointcut-ref="calculator-addition-logging"
+				method="beforeAdvice" />
+
+			<aop:after pointcut-ref="calculator-addition-logging"
+				method="afterAdvice" />
+
+
+			<!-- NB after-return no funciona cuando un around esta ligado a un pointcut -->
+
+			<!-- <aop:around pointcut-ref="calculator-addition-logging" -->
+			<!-- method="aroundAdvice" /> -->
+
+			<aop:after-returning pointcut-ref="calculator-addition-logging"
+				method="afterReturningAdvice" />
+
+
+
+
+			<!-- prubea de varios servicios -->
+
+
+
+
+
+
+
+		</aop:aspect>
+
+		<aop:aspect id="loggerAspect" ref="loggerService">
+			<aop:pointcut expression="execution(* xml.schema.based.aop.business.*.*(..))"
+				id="logeaTodosServicios" />
+
+			<aop:before pointcut-ref="logeaTodosServicios" method="loggerBeforeMethodCalls" />
+
+
+
+		</aop:aspect>
+
+	</aop:config>
+
+	<bean id="calculatorService" class="xml.schema.based.aop.CalculatorService" />
+	<bean id="loggingService" class="xml.schema.based.aop.LoggingService" />
+	<bean id="usuariosService" class="xml.schema.based.aop.business.UsuariosService" />
+	<bean id="contraseniasService" class="xml.schema.based.aop.business.ContraseniasService" />
+	<bean id="loggerService" class="xml.schema.based.aop.logger.LoggerService" />
+
+</beans>
