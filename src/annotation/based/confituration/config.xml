@@ -7,16 +7,16 @@
    http://www.springframework.org/schema/context
    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-	<context:annotation-config />
+	<!-- <context:annotation-config /> -->
 	<!-- bean definitions go here -->
 
-
+	<aop:aspectj-autoproxy />
 
 
 	<bean id="textBean" class="annotation.based.confituration.Text">
 		<property name="text" value="5000"></property>
 	</bean>
-	
-	<bean id ="screen" class="annotation.based.confituration.Screen"/>
+
+	<bean id="screen" class="annotation.based.confituration.Screen" />
 
 </beans>
