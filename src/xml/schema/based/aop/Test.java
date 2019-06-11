@@ -12,16 +12,11 @@ public class Test {
 		// TODO Auto-generated method stub
 
 		AbstractApplicationContext app = new ClassPathXmlApplicationContext("xml/schema/based/aop/config.xml");
-		// LoggingService loggingService = (LoggingService)
-		// app.getBean("logging");
 
-		CalculatorService calculatorService = (CalculatorService) app.getBean("calculatorService");
-		System.out.println("Calcul :" + calculatorService.addition(1, 1));
-
-		UsuariosService usuariosService = (UsuariosService) app.getBean("usuariosService");
-		usuariosService.cambiarUsuario();
-		usuariosService.sacarUsuario();
-		
+//		UsuariosService usuariosService = (UsuariosService) app.getBean("usuariosService");
+//		usuariosService.cambiarUsuario();
+//		usuariosService.sacarUsuario();
+//		
 		ContraseniasService contraseniasService = (ContraseniasService) app.getBean("contraseniasService");
 		contraseniasService.cambiarContrasenia();
 		contraseniasService.sacarContrasenia();
