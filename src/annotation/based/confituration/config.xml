@@ -18,7 +18,7 @@
 	<aop:aspectj-autoproxy />
 
 
-	<aop:aspectj-autoproxy />
+	
 
 
 	<bean id="textBean" class="annotation.based.confituration.Text">

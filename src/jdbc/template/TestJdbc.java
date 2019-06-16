@@ -20,7 +20,6 @@ public class TestJdbc {
 	UserDAOImpl userDAOImpl  = (UserDAOImpl) applicationContext.getBean("userDAOImpl");
 	userDAOImpl.createUser(user);
 		
-		
 	}
 
 }

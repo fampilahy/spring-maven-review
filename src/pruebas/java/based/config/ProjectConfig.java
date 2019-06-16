@@ -1,4 +1,4 @@
-package pruebas.en.baso;
+package pruebas.java.based.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
