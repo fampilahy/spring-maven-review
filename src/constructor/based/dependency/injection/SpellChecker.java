@@ -1,4 +1,4 @@
-package constructor.based.dependency.injection.model;
+package constructor.based.dependency.injection;
 
 public class SpellChecker {
 

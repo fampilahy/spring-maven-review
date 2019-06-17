@@ -1,4 +1,4 @@
-package tx.programmatic.managment;
+package tx.declarative;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

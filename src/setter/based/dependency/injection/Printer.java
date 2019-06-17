@@ -1,4 +1,4 @@
-package setter.based.dependency.injection.model;
+package setter.based.dependency.injection;
 
 public class Printer {
 	

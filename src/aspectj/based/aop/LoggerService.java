@@ -1,4 +1,4 @@
-package aspectj.based.aop.logger;
+package aspectj.based.aop;
 
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;

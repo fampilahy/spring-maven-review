@@ -1,4 +1,4 @@
-package xml.schema.based.aop.business;
+package xml.schema.based.aop;
 
 public class ContraseniasService {
 

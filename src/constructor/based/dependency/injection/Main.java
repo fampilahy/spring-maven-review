@@ -3,8 +3,6 @@ package constructor.based.dependency.injection;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import constructor.based.dependency.injection.model.TextEditor;
-
 public class Main {
 
 	

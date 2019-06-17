@@ -3,9 +3,6 @@ package xml.schema.based.aop;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import xml.schema.based.aop.business.ContraseniasService;
-import xml.schema.based.aop.business.UsuariosService;
-
 public class Test {
 
 	public static void main(String[] args) {

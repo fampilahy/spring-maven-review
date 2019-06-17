@@ -1,4 +1,4 @@
-package aspectj.based.aop.business;
+package aspectj.based.aop;
 
 public class PromocionesService {
 
