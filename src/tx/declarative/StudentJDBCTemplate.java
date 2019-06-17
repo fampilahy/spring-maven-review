@@ -25,8 +25,8 @@ public class StudentJDBCTemplate implements StudentDAO {
 
 //			String query2 = "select * from Student where id in (select max(id) from Student)";
 //			Student student = jdbcTemplate.query(query2, new StudentMapper()).get(0);
-//			
-			//this make an error
+			
+//			this make an error
 			String query2 = "select * from Student where id in (select max(id) from Student)";
 			Student student = jdbcTemplate.queryForObject(query2, new StudentMapper());
 
