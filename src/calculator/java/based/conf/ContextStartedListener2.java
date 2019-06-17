@@ -1,13 +1,13 @@
-package calculator;
+package calculator.java.based.conf;
 
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextStartedEvent;
 
-public class ContextStartedListener implements ApplicationListener<ContextStartedEvent> {
+public class ContextStartedListener2 implements ApplicationListener<ContextStartedEvent> {
 
 	@Override
 	public void onApplicationEvent(ContextStartedEvent event) {
-		System.out.println("Context Started Event Received");
+		System.out.println("Context Started Event Received 2");
 
 		try {
 			Thread.sleep(10000);
@@ -16,11 +16,11 @@ public class ContextStartedListener implements ApplicationListener<ContextStarte
 			e.printStackTrace();
 		}
 		
-		System.out.println("Context Started Event Received after 10s");
+		System.out.println("Context Started Event Received after 10s 2");
 
 	}
 
-	public ContextStartedListener() {
+	public ContextStartedListener2() {
 
 	}
 }

@@ -1,4 +1,4 @@
-package application;
+package real.app.java.based.configuration;
 
 
 public class PrintToScreenService {

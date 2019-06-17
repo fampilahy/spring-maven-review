@@ -1,4 +1,4 @@
-package annotation.based.confituration;
+package annotation.based.ioc;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

@@ -1,4 +1,4 @@
-package calculator;
+package calculator.java.based.conf;
 
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;

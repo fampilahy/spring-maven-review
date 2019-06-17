@@ -1,4 +1,4 @@
-package calculator;
+package calculator.java.based.conf;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;

@@ -1,4 +1,4 @@
-package annotation.based.confituration;
+package annotation.based.ioc;
 
 import javax.annotation.PostConstruct;
 

@@ -1,4 +1,4 @@
-package calculator;
+package calculator.java.based.conf;
 
 public class CalculatorService {
 
